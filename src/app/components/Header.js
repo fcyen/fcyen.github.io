@@ -8,7 +8,7 @@ const Header = () => {
               className="hover:bg-gray-800 text-white px-4 py-2 
                               no-underline transition duration-300 
                               bg-transparent hover:bg-gray-700"
-              href="#about"
+              href="/"
             >
               About
             </a>
@@ -24,7 +24,7 @@ const Header = () => {
               className="hover:bg-gray-800 text-white px-4 py-2 
                               no-underline transition duration-300 
                               bg-transparent hover:bg-gray-700"
-              href="#travels"
+              href="travels"
             >
               Travels
             </a>

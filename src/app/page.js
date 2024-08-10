@@ -11,8 +11,7 @@ export default function Home() {
   //TODO：style website based on the behance design
   return (
     <div>
-      <Header></Header>
-      <div className="mb-16 container mx-auto pt-20">
+      <div className="mb-16 container mx-auto">
         <IntroCard></IntroCard>
       </div>
     </div>

@@ -1,6 +1,8 @@
 import { EB_Garamond } from "next/font/google";
 import "./globals.css";
 
+import Header from "./components/Header";
+
 const font = EB_Garamond({ subsets: ["latin"] });
 
 export const metadata = {
@@ -11,7 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <Header/>
+        <div className="pt-20">{children}</div>
+      </body>
     </html>
   );
 }
