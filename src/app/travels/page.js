@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useEffect, useRef } from "react";
 
@@ -37,22 +37,17 @@ export default function Travels() {
   }, []);
 
   // Set the height of the image container to twice the height of image
-  useEffect(()=> {
+  useEffect(() => {
     if (imageRef.current) {
-      console.log("setHeight")
       const height = imageRef.current.getBoundingClientRect().height * 1.5;
       imageContainerRef.current.style.maxHeight = `${height}px`;
     }
   }, []);
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div className="min-h-screen grid justify-center">
       <div className="relative w-full" ref={imageContainerRef}>
-        <img 
-          alt="Bali"
-          src="/assets/bali-main.jpg" 
-          ref={imageRef}
-        />
+        <img alt="Bali" src="/assets/bali-main.jpg" ref={imageRef} />
       </div>
     </div>
   );
