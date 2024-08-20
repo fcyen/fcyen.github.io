@@ -45,9 +45,9 @@ export default function Travels() {
   }, []);
 
   return (
-    <div className="min-h-screen grid justify-center">
+    <div className="grid min-h-screen justify-center">
       <div className="relative w-full" ref={imageContainerRef}>
-        <img alt="Bali" src="/assets/bali-main.jpg" ref={imageRef} />
+        <img alt="Bali" src="/images/bali-main.jpg" ref={imageRef} />
       </div>
     </div>
   );
