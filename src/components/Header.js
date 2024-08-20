@@ -1,70 +1,70 @@
-'use client'
+"use client";
 
-import { Fragment } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { usePathname } from 'next/navigation'
-import clsx from 'clsx'
-import { Menu, Popover, Transition, Disclosure } from '@headlessui/react'
+import { Fragment } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
+import { Menu, Popover, Transition, Disclosure } from "@headlessui/react";
 
-import { Button } from './Button'
-import { Container } from './Container'
-import logo from '@/images/logo.png'
-import logoIcon from '@/images/logo-icon.png'
+import { Button } from "./Button";
+import { Container } from "./Container";
+import logo from "@/images/logo.png";
+import logoIcon from "@/images/logo-icon.png";
 
 const links = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Work', href: '/work' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Contact', href: '/contact' },
-]
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Work", href: "/work" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
+];
 
 const pages = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Work', href: '/work' },
-  { label: 'Case study', href: '/work/horizons-in-perspective' },
-  { label: 'Blog', href: '/blog' },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Work", href: "/work" },
+  { label: "Case study", href: "/work/horizons-in-perspective" },
+  { label: "Blog", href: "/blog" },
   {
-    label: 'Blog post',
-    href: '/blog/how-i-use-tailwind-to-design-from-scratch',
+    label: "Blog post",
+    href: "/blog/how-i-use-tailwind-to-design-from-scratch",
   },
-  { label: 'Contact', href: '/contact' },
-]
+  { label: "Contact", href: "/contact" },
+];
 
 export function Header() {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   function MenuIcon({ open }) {
     return (
       <span className="relative h-3.5 w-4">
         <span
           className={clsx(
-            'absolute block h-0.5 rotate-0 transform rounded-full bg-slate-700 opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900',
-            open ? 'left-1/2 top-1.5 w-0' : 'left-0 top-0 w-full'
+            "absolute block h-0.5 rotate-0 transform rounded-full bg-slate-700 opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900",
+            open ? "left-1/2 top-1.5 w-0" : "left-0 top-0 w-full"
           )}
         />
         <span
           className={clsx(
-            'absolute left-0 top-1.5 block h-0.5 w-full transform rounded-full bg-slate-700 opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900',
-            open ? 'rotate-45' : 'rotate-0'
+            "absolute left-0 top-1.5 block h-0.5 w-full transform rounded-full bg-slate-700 opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900",
+            open ? "rotate-45" : "rotate-0"
           )}
         />
         <span
           className={clsx(
-            'absolute left-0 top-1.5 block h-0.5 w-full transform rounded-full bg-slate-700 opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900',
-            open ? '-rotate-45' : 'rotate-0'
+            "absolute left-0 top-1.5 block h-0.5 w-full transform rounded-full bg-slate-700 opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900",
+            open ? "-rotate-45" : "rotate-0"
           )}
         />
         <span
           className={clsx(
-            'absolute block h-0.5 rotate-0 transform rounded-full bg-slate-700 opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900',
-            open ? 'left-1/2 top-1.5 w-0' : 'left-0 top-3 w-full'
+            "absolute block h-0.5 rotate-0 transform rounded-full bg-slate-700 opacity-100 transition-all duration-300 ease-in-out group-hover:bg-slate-900",
+            open ? "left-1/2 top-1.5 w-0" : "left-0 top-3 w-full"
           )}
         />
       </span>
-    )
+    );
   }
 
   function MobileNav() {
@@ -118,10 +118,10 @@ export function Header() {
                       <>
                         <Disclosure.Button
                           className={clsx(
-                            'group flex w-full items-center gap-2 text-base font-semibold duration-200 ease-in-out',
+                            "group flex w-full items-center gap-2 text-base font-semibold duration-200 ease-in-out",
                             open
-                              ? 'text-slate-900'
-                              : 'text-slate-700 hover:text-slate-900'
+                              ? "text-slate-900"
+                              : "text-slate-700 hover:text-slate-900"
                           )}
                         >
                           <span>Pages</span>
@@ -130,10 +130,10 @@ export function Header() {
                             viewBox="0 0 20 20"
                             fill="currentColor"
                             className={clsx(
-                              'h-5 w-5 duration-300',
+                              "h-5 w-5 duration-300",
                               open
-                                ? 'rotate-90 text-slate-900'
-                                : 'text-slate-700 group-hover:text-slate-900'
+                                ? "rotate-90 text-slate-900"
+                                : "text-slate-700 group-hover:text-slate-900"
                             )}
                             aria-hidden="true"
                           >
@@ -169,7 +169,7 @@ export function Header() {
           </Transition.Child>
         </Transition.Root>
       </Popover>
-    )
+    );
   }
 
   return (
@@ -202,8 +202,8 @@ export function Header() {
                 className={clsx(
                   'relative duration-200 after:absolute after:-bottom-2.5 after:left-1/2 after:h-0.5 after:w-4 after:-translate-x-1/2 after:rounded-full after:bg-slate-900 after:opacity-0 after:content-[""]',
                   pathname == link.href
-                    ? 'font-semibold text-slate-900 after:opacity-100'
-                    : 'font-medium text-slate-700 hover:text-slate-900 hover:after:opacity-25'
+                    ? "font-semibold text-slate-900 after:opacity-100"
+                    : "font-medium text-slate-700 hover:text-slate-900 hover:after:opacity-25"
                 )}
               >
                 {link.label}
@@ -215,10 +215,10 @@ export function Header() {
                 <>
                   <Menu.Button
                     className={clsx(
-                      'group flex items-center font-medium outline-none duration-200 ease-in-out focus:outline-none',
+                      "group flex items-center font-medium outline-none duration-200 ease-in-out focus:outline-none",
                       open
-                        ? 'text-slate-900'
-                        : 'text-slate-700  hover:text-slate-900'
+                        ? "text-slate-900"
+                        : "text-slate-700  hover:text-slate-900"
                     )}
                   >
                     <span>Pages</span>
@@ -228,10 +228,10 @@ export function Header() {
                       fill="currentColor"
                       aria-hidden="true"
                       className={clsx(
-                        'ml-2 h-5 w-5 duration-300',
+                        "ml-2 h-5 w-5 duration-300",
                         open
-                          ? 'rotate-180 text-slate-900'
-                          : 'text-slate-600 group-hover:text-slate-800'
+                          ? "rotate-180 text-slate-900"
+                          : "text-slate-600 group-hover:text-slate-800"
                       )}
                     >
                       <path
@@ -248,10 +248,10 @@ export function Header() {
                         <Link
                           href={subLink.href}
                           className={clsx(
-                            'block px-5 py-3.5 font-medium',
+                            "block px-5 py-3.5 font-medium",
                             pathname == subLink.href
-                              ? 'bg-slate-100/60 text-slate-900'
-                              : 'rounded-md text-slate-700 transition duration-300 ease-in-out hover:bg-slate-50 hover:text-slate-900'
+                              ? "bg-slate-100/60 text-slate-900"
+                              : "rounded-md text-slate-700 transition duration-300 ease-in-out hover:bg-slate-50 hover:text-slate-900"
                           )}
                         >
                           {subLink.label}
@@ -274,5 +274,5 @@ export function Header() {
         </nav>
       </Container>
     </header>
-  )
+  );
 }
