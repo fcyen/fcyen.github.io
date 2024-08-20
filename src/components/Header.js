@@ -18,6 +18,7 @@ const links = [
   { label: "Work", href: "/work" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
+  { label: "Travels", href: "/travels" },
 ];
 
 const pages = [
@@ -113,7 +114,7 @@ export function Header() {
                     </Link>
                   ))}
 
-                  <Disclosure as="div" className="relative">
+                  {/* <Disclosure as="div" className="relative">
                     {({ open }) => (
                       <>
                         <Disclosure.Button
@@ -162,7 +163,7 @@ export function Header() {
                         </Disclosure.Panel>
                       </>
                     )}
-                  </Disclosure>
+                  </Disclosure> */}
                 </div>
               </div>
             </Popover.Panel>
@@ -210,7 +211,7 @@ export function Header() {
               </Link>
             ))}
 
-            <Menu as="div" className="relative">
+            {/* <Menu as="div" className="relative">
               {({ open }) => (
                 <>
                   <Menu.Button
@@ -261,12 +262,12 @@ export function Header() {
                   </Menu.Items>
                 </>
               )}
-            </Menu>
+            </Menu> */}
           </div>
           <div className="flex items-center">
-            <Button variant="secondary" href="#">
+            {/* <Button variant="secondary" href="#">
               Book a call
-            </Button>
+            </Button> */}
             <div className="ml-4 md:hidden">
               <MobileNav />
             </div>
