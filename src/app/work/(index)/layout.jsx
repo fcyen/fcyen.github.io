@@ -4,6 +4,7 @@ import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 
 import { getFeaturedTags } from '@/lib/caseStudies'
+import { ComingSoon } from '../../../components/ComingSoon'
 
 export const metadata = {
   title: {
@@ -17,7 +18,8 @@ export const metadata = {
 export default function WorkLayout({ children }) {
   return (
     <>
-      <section className="overflow-hidden bg-white py-16 sm:pt-24 lg:pt-32">
+      <ComingSoon />
+      {/* <section className="overflow-hidden bg-white py-16 sm:pt-24 lg:pt-32">
         <Container>
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
@@ -40,7 +42,7 @@ export default function WorkLayout({ children }) {
             <Pagination />
           </div>
         </Container>
-      </section>
+      </section> */}
       <Footer />
     </>
   )

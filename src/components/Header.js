@@ -11,15 +11,16 @@ import { Button } from "./Button";
 import { Container } from "./Container";
 import logo from "@/images/logo.png";
 import logoIcon from "@/images/logo-icon.png";
+import { pageLinks } from "./Footer";
 
-const links = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Work", href: "/work" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
-  { label: "Travels", href: "/travels" },
-];
+// export const pageLinks = [
+//   { label: "Home", href: "/" },
+//   { label: "About", href: "/about" },
+//   { label: "Work", href: "/work" },
+//   { label: "Blog", href: "/blog" },
+//   // { label: "Contact", href: "/contact" },
+//   { label: "Travels", href: "/travels" },
+// ];
 
 const pages = [
   { label: "Home", href: "/" },
@@ -104,7 +105,7 @@ export function Header() {
             >
               <div>
                 <div className="flex flex-col space-y-4">
-                  {links.map((link) => (
+                  {pageLinks.map((link) => (
                     <Link
                       key={`${link.label}-mobile`}
                       href={link.href}
@@ -178,7 +179,8 @@ export function Header() {
       <Container className="flex h-full w-full items-center">
         <nav className="relative z-50 flex w-full items-center justify-between">
           <div className="flex shrink-0 items-center">
-            <Link
+            {/* Logo */}
+            {/* <Link
               href="/"
               aria-label="Home"
               className="flex flex-shrink-0 items-center"
@@ -193,10 +195,10 @@ export function Header() {
                 alt=""
                 className="hidden h-8 w-auto md:block lg:hidden"
               />
-            </Link>
+            </Link> */}
           </div>
           <div className="hidden items-center md:flex md:space-x-6 lg:space-x-8">
-            {links.map((link) => (
+            {pageLinks.map((link) => (
               <Link
                 key={`${link.label}-desktop`}
                 href={link.href}

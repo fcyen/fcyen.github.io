@@ -4,6 +4,7 @@ import { Tabs } from '@/components/Tabs'
 import { Container } from '@/components/Container'
 import { Pagination } from '@/components/Pagination'
 import { getAllCategories } from '@/lib/articles'
+import { ComingSoon } from '../../../components/ComingSoon'
 
 export const metadata = {
   title: {
@@ -19,7 +20,8 @@ export default async function BlogLayout({ children }) {
 
   return (
     <>
-      <BlogHero />
+      <ComingSoon />
+      {/* <BlogHero />
       <section
         id="articles"
         className="overflow-hidden bg-white py-16 sm:py-24 lg:py-28"
@@ -36,7 +38,7 @@ export default async function BlogLayout({ children }) {
           {children}
           <Pagination />
         </Container>
-      </section>
+      </section> */}
       <Footer />
     </>
   )

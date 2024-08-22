@@ -1,10 +1,10 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import clsx from 'clsx'
+import Link from "next/link";
+import Image from "next/image";
+import clsx from "clsx";
 
-import { Button } from './Button'
-import { Container } from './Container'
-import newsletterBg from '@/images/newsletter-bg.png'
+import { Button } from "./Button";
+import { Container } from "./Container";
+import newsletterBg from "@/images/newsletter-bg.png";
 import {
   DribbbleIcon,
   InstagramIcon,
@@ -12,48 +12,49 @@ import {
   LinkedInIcon,
   GitHubIcon,
   EmailIcon,
-} from './SocialIcons'
+} from "./SocialIcons";
 
-const links = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Work', href: '/work' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Contact', href: '/contact' },
-]
+export const pageLinks = [
+  { label: "Home", href: "/" },
+  // { label: "About", href: "/about" },
+  { label: "Work", href: "/work" },
+  { label: "Blog", href: "/blog" },
+  { label: "Travels", href: "/travels" },
+  // { label: "Contact", href: "/contact" },
+];
 
 const socialLinks = [
   {
-    label: 'Email me',
+    label: "Email me",
     icon: EmailIcon,
-    href: '#',
+    href: "#",
   },
   {
-    label: 'Dribbble',
+    label: "Dribbble",
     icon: DribbbleIcon,
-    href: '#',
+    href: "#",
   },
   {
-    label: 'Instagram',
+    label: "Instagram",
     icon: InstagramIcon,
-    href: '#',
+    href: "#",
   },
   {
-    label: 'Twitter',
+    label: "Twitter",
     icon: TwitterIcon,
-    href: '#',
+    href: "#",
   },
   {
-    label: 'LinkedIn',
+    label: "LinkedIn",
     icon: LinkedInIcon,
-    href: '#',
+    href: "#",
   },
   {
-    label: 'Github',
+    label: "Github",
     icon: GitHubIcon,
-    href: '#',
+    href: "#",
   },
-]
+];
 
 function SocialLink({ icon: Icon, label, ...props }) {
   return (
@@ -64,12 +65,12 @@ function SocialLink({ icon: Icon, label, ...props }) {
       <Icon className="h-4 w-4 shrink-0 text-slate-200 duration-200 ease-in-out group-hover:fill-slate-100" />
       {label}
     </Link>
-  )
+  );
 }
 
-export function Footer({ newsletter = true }) {
+export function Footer({ newsletter = false }) {
   return (
-    <section className={clsx(newsletter && 'pt-12 sm:pt-16')}>
+    <section className={clsx(newsletter && "pt-12 sm:pt-16")}>
       {newsletter && (
         <div className="relative">
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-slate-900"></div>
@@ -116,7 +117,8 @@ export function Footer({ newsletter = true }) {
       )}
       <footer className="overflow-hidden bg-slate-900 pb-8 pt-20 sm:pb-12 sm:pt-24 lg:pt-32">
         <Container>
-          <div className="mx-auto grid max-w-xl items-center gap-5 lg:mx-0 lg:max-w-none lg:grid-cols-12 lg:gap-12 xl:gap-20">
+          {/** Socials */}
+          {/* <div className="mx-auto grid max-w-xl items-center gap-5 lg:mx-0 lg:max-w-none lg:grid-cols-12 lg:gap-12 xl:gap-20">
             <div className="lg:col-span-7">
               <h3 className="text-center font-display text-4xl font-semibold text-white sm:text-5xl lg:max-w-xl lg:text-left">
                 Lets make something great together
@@ -176,10 +178,10 @@ export function Footer({ newsletter = true }) {
               </div>
             </div>
           </div>
-          <hr className="mb-6 mt-12 h-px w-full border-slate-600/90 sm:mb-10 sm:mt-16" />
+          <hr className="mb-6 mt-12 h-px w-full border-slate-600/90 sm:mb-10 sm:mt-16" /> */}
           <div className="flex flex-col items-center justify-between md:flex-row">
             <div className="flex items-center gap-6">
-              {links.map((link, index) => (
+              {pageLinks.map((link, index) => (
                 <Link
                   key={`footer-link-${index}`}
                   href={link.href}
@@ -197,5 +199,5 @@ export function Footer({ newsletter = true }) {
         </Container>
       </footer>
     </section>
-  )
+  );
 }
