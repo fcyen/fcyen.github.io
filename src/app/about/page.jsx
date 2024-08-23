@@ -8,8 +8,8 @@ import { Footer } from '@/components/Footer'
 
 export const metadata = {
   title: 'About',
-  description:
-    "Hi, I'm Jane Doe, a passionate developer, entrepreneur, and general technology enthusiast living in San Francisco.",
+  // description:
+  //   "Hi, I'm Jane Doe, a passionate developer, entrepreneur, and general technology enthusiast living in San Francisco.",
 }
 
 export default function AboutPage() {

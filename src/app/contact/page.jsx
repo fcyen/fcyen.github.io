@@ -8,8 +8,8 @@ import image from '@/images/contact.jpg'
 
 export const metadata = {
   title: 'Contact me',
-  description:
-    "Whether you're looking to kickstart a new web project or simply want to say hi, feel free to get in touch.",
+  // description:
+  //   "Whether you're looking to kickstart a new web project or simply want to say hi, feel free to get in touch.",
 }
 
 function Form() {

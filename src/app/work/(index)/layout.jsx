@@ -8,11 +8,11 @@ import { ComingSoon } from '../../../components/ComingSoon'
 
 export const metadata = {
   title: {
-    template: 'Work - %s - Jane Doe',
+    template: 'Work - %s',
     default: 'Work',
   },
-  description:
-    'Explore an impressive collection of case studies showcasing a my diverse skill set, innovative solutions, and successful projects.',
+  // description:
+  //   'Explore an impressive collection of case studies showcasing a my diverse skill set, innovative solutions, and successful projects.',
 }
 
 export default function WorkLayout({ children }) {
