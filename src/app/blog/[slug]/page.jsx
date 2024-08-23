@@ -14,7 +14,7 @@ import {
 } from '@/components/CategoryIcons'
 
 const iconOptions = {
-  'Web Development': WebDevelopmentIcon,
+  'Coding': WebDevelopmentIcon,
   Business: BusinessIcon,
   'Content Creation': ContentCreationIcon,
   Tutorials: TutorialIcon,

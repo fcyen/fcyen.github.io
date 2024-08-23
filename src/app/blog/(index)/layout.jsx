@@ -11,8 +11,8 @@ export const metadata = {
     template: 'Blog - %s',
     default: 'Blog',
   },
-  // description:
-  //   'Explore a diverse range of blog posts covering web development, design, content creation, business, programming tutorials, and more.',
+  description:
+    'A personal record of what I\'ve explored, what I\'m working on, and what I\'ve learned',
 }
 
 export default async function BlogLayout({ children }) {
@@ -20,8 +20,8 @@ export default async function BlogLayout({ children }) {
 
   return (
     <>
-      <ComingSoon />
-      {/* <BlogHero />
+      {/* <ComingSoon /> */}
+      {/* <BlogHero /> */}
       <section
         id="articles"
         className="overflow-hidden bg-white py-16 sm:py-24 lg:py-28"
@@ -30,15 +30,15 @@ export default async function BlogLayout({ children }) {
           <h2 className="text-center font-display text-4xl font-semibold text-slate-900 sm:text-5xl">
             Latest Articles
           </h2>
-          <Tabs
+          {/* <Tabs
             tabs={categories}
             directory="blog"
             className="mt-9 justify-center gap-2"
-          />
+          /> */}
           {children}
           <Pagination />
         </Container>
-      </section> */}
+      </section>
       <Footer />
     </>
   )
