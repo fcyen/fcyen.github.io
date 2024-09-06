@@ -1,17 +1,18 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useMemo } from "react";
 
 export default function Travels() {
   const imageRef = useRef(null);
   const imageContainerRef = useRef(null);
   const requestRef = useRef(null);
 
-  const handleScroll = () => {
+  const handleScroll = useMemo(() => {
     if (!requestRef.current) {
-      requestRef.current = requestAnimationFrame(updateZoom);
+      //TODO: fix this error on build: "requestAnimationFrame is not defined"
+      // requestRef.current = requestAnimationFrame(updateZoom);
     }
-  };
+  }, []);
 
   const updateZoom = () => {
     const scrollPosition = window.scrollY;
@@ -47,7 +48,7 @@ export default function Travels() {
   return (
     <div className="grid min-h-screen justify-center">
       <div className="relative w-full" ref={imageContainerRef}>
-        <Image alt="Bali" src="/images/bali-main.jpg" ref={imageRef} />
+        <img alt="Bali" src="/images/bali-main.jpg" ref={imageRef} />
       </div>
     </div>
   );
