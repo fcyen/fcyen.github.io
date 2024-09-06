@@ -34,7 +34,7 @@ export default function Travels() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
   // Set the height of the image container to twice the height of image
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function Travels() {
   return (
     <div className="grid min-h-screen justify-center">
       <div className="relative w-full" ref={imageContainerRef}>
-        <img alt="Bali" src="/images/bali-main.jpg" ref={imageRef} />
+        <Image alt="Bali" src="/images/bali-main.jpg" ref={imageRef} />
       </div>
     </div>
   );
