@@ -31,22 +31,17 @@ export default function CaseStudyPage({ params }) {
         coverImage={caseStudy.coverImage}
       />
       <CaseStudyDetails
-        client={caseStudy.client}
         description={caseStudy.description}
         projectDuration={caseStudy.projectDuration}
         projectURL={caseStudy.projectURL}
       >
         <MdxContent code={caseStudy.body.code} />
       </CaseStudyDetails>
-      <CaseStudyGallery images={caseStudy.images} />
-      <CaseStudyTestimonial
-        clientName={caseStudy.client.name}
-        testimonial={caseStudy.testimonial}
-      />
+      {caseStudy.images && (<CaseStudyGallery images={caseStudy.images} />)}
       <CaseStudyNavigation caseStudySlug={caseStudy.slug} />
       <Footer newsletter={false} />
     </>
   )
 }
 
-export const dynamicParams = false
+export const dynamicParams = true

@@ -30,7 +30,7 @@ export function CaseStudyNavigation({ caseStudySlug }) {
     <section className="py-8 border-t border-slate-200">
       <Container>
         <div className="flex items-center justify-between">
-          <Link href={prevCaseStudy.url} className="group space-y-1.5">
+          {/* <Link href={prevCaseStudy.url} className="group space-y-1.5">
             <div className="flex items-center gap-1 duration-200 text-slate-500 group-hover:text-sky-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@ export function CaseStudyNavigation({ caseStudySlug }) {
                 {prevCaseStudy.title}
               </h4>
             </div>
-          </Link>
+          </Link> */}
 
           <Link
             href="/work"
@@ -72,7 +72,7 @@ export function CaseStudyNavigation({ caseStudySlug }) {
             </svg>
           </Link>
 
-          <Link href={nextCaseStudy.url} className="group space-y-1.5">
+          {/* <Link href={nextCaseStudy.url} className="group space-y-1.5">
             <div className="flex items-center justify-end gap-1 duration-200 text-slate-500 group-hover:text-sky-500">
               Next
               <svg
@@ -94,7 +94,7 @@ export function CaseStudyNavigation({ caseStudySlug }) {
                 {nextCaseStudy.title}
               </h4>
             </div>
-          </Link>
+          </Link> */}
         </div>
       </Container>
     </section>

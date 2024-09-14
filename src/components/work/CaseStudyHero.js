@@ -19,13 +19,13 @@ function Tag({ tag }) {
   )
 }
 
-export function CaseStudyHero({ title, subtitle, tags, coverImage }) {
+export function CaseStudyHero({ title, tags, coverImage }) {
   return (
     <section className="pt-16 overflow-hidden bg-white sm:pt-20 lg:pt-28">
       <Container>
         <div className="max-w-lg mx-auto sm:max-w-3xl lg:mx-0 lg:max-w-none">
           <h1 className="text-4xl font-semibold leading-tight font-display text-slate-900 sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight">
-            {title} - {subtitle}
+            {title}
           </h1>
           <ul className="flex flex-wrap items-center gap-4 mt-8 sm:gap-6">
             {tags.map((tag) => (
@@ -34,16 +34,18 @@ export function CaseStudyHero({ title, subtitle, tags, coverImage }) {
           </ul>
         </div>
       </Container>
-      <div className="relative block w-full mt-16 overflow-hidden aspect-h-9 aspect-w-16 md:aspect-h-2 md:aspect-w-5 lg:mt-20">
-        <Image
-          src={coverImage}
-          alt={title}
-          fill
-          className="object-cover w-full bg-slate-100"
-          quality={90}
-          priority
-        />
-      </div>
+      {coverImage ? 
+        <div className="relative block w-full mt-16 overflow-hidden aspect-h-9 aspect-w-16 md:aspect-h-2 md:aspect-w-5 lg:mt-20">
+          <Image
+            src={coverImage}
+            alt={title}
+            fill
+            className="object-cover w-full bg-slate-100"
+            quality={90}
+            priority
+          /> 
+        </div> : null
+      }
     </section>
   )
 }
