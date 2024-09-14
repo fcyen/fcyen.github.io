@@ -38,13 +38,16 @@ export function Post({ post }) {
       </div>
 
       <div className="group relative flex flex-1 flex-col px-5 pb-10 pt-8 xl:px-7">
-        <Link
+        {/* CY: changed this from a Link to a normal text */}
+        {/* <Link
           href={`/blog/categories/${categorySlug}`}
           className="group relative z-10 flex items-center gap-2.5 text-md  text-sky-700 transition duration-200 ease-in-out hover:text-sky-600"
-        >
+        > */}
+        <div className="group relative z-10 flex items-center gap-2.5 text-md  text-sky-700">
           <CategoryIcon className="h-4 w-4 text-sky-600" />
           {post.category}
-        </Link>
+        {/* </Link> */}
+        </div>
         <div className="flex-1">
           <h3 className="mt-4 font-display text-xl font-medium leading-normal text-slate-900 decoration-slate-400 transition duration-200 ease-in-out group-hover:text-sky-900">
             <Link href={post.url}>

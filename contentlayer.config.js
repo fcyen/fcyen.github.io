@@ -23,7 +23,6 @@ export const Post = defineDocumentType(() => ({
     category: { type: 'string', required: true },
     image: { type: 'string', required: true },
     description: { type: 'string', required: true },
-    timeToRead: { type: 'number', required: true }, // in minutes
   },
 
   computedFields,
