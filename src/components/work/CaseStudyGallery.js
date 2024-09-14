@@ -15,8 +15,8 @@ export function CaseStudyGallery({ images }) {
               <Image
                 src={image}
                 alt=""
-                fill
-                className="object-cover object-center w-full rounded-3xl bg-slate-100"
+                fill 
+                className="object-contain object-center w-full rounded-3xl bg-slate-100"
                 quality={90}
                 sizes="(min-width: 1280px) 37rem, (min-width: 1024px) calc(50vw - 3rem), (min-width: 640px) 20rem, calc(100vw - 2.5rem)"
               />

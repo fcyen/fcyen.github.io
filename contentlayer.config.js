@@ -34,20 +34,16 @@ export const CaseStudy = defineDocumentType(() => ({
   contentType: 'mdx',
   fields: {
     title: { type: 'string', required: true },
-    subtitle: { type: 'string', required: true },
     date: { type: 'date', required: true },
     tags: {
       type: 'list',
       of: { type: 'string' },
     },
     thumbnail: { type: 'string', required: true },
-    coverImage: { type: 'string', required: true },
+    coverImage: { type: 'string' },
     images: { type: 'list', of: { type: 'string' } },
     projectURL: { type: 'string', required: true },
     description: { type: 'string', required: true },
-    projectDuration: { type: 'string', required: true },
-    client: { type: 'json', required: true },
-    testimonial: { type: 'json', required: true },
   },
 
   computedFields,
