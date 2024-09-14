@@ -41,13 +41,13 @@ export default function BlogPost({ params }) {
           <header className="relative bg-slate-50 py-16 sm:pt-24 lg:pt-28">
             <div className="absolute inset-x-0 bottom-0 h-1/4 bg-white" />
             <div className="relative mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
-              <Link
+              {/* <Link
                 href={`/blog/categories/${categorySlug}`}
                 className="group inline-flex items-center justify-center gap-3.5 text-base leading-5 tracking-wide text-sky-700 transition duration-200 ease-in-out hover:text-sky-600 sm:text-lg"
               >
                 <CategoryIcon className="h-[18px] w-[18px] text-sky-700/90 transition duration-200 group-hover:text-sky-600 sm:h-5 sm:w-5" />
                 {post.category}
-              </Link>
+              </Link> */}
               <h1 className="mt-6 text-center font-display text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl sm:leading-tight">
                 {post.title}
               </h1>
@@ -73,23 +73,6 @@ export default function BlogPost({ params }) {
                   <time dateTime={post.date}>
                     {format(parseISO(post.date), 'LLL d, yyyy')}
                   </time>
-                </span>
-                <span className="flex items-center gap-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.75"
-                    stroke="currentColor"
-                    className="h-6 w-6 text-slate-400"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  {`${post.timeToRead} minute read`}
                 </span>
               </div>
               <div className="mx-auto mt-16 w-full max-w-4xl">
@@ -121,4 +104,4 @@ export default function BlogPost({ params }) {
   )
 }
 
-export const dynamicParams = false
+export const dynamicParams = true
