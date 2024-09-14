@@ -68,7 +68,7 @@ export function CaseStudies({ caseStudies }) {
   return (
     <div
       className={clsx(
-        'mx-auto mt-12 grid max-w-xl gap-12 sm:mt-16 lg:mx-0 lg:mt-24 lg:max-w-none lg:grid-cols-2 lg:gap-10 xl:gap-24',
+        'mx-auto grid max-w-xl gap-12 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-10 xl:gap-24',
         caseStudies.length % 2 === 0 && 'lg:pb-32'
       )}
     >
