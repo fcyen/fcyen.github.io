@@ -18,7 +18,7 @@ export const pageLinks = [
   { label: "Home", href: "/" },
   // { label: "About", href: "/about" },
   { label: "Work", href: "/work" },
-  { label: "Blog", href: "/blog" },
+  // { label: "Blog", href: "/blog" },
   { label: "Travels", href: "/travels" },
   // { label: "Contact", href: "/contact" },
 ];
