@@ -1,5 +1,6 @@
 "use client";
 
+import { ComingSoon } from "@/components/ComingSoon";
 import { useEffect, useRef, useMemo } from "react";
 
 export default function Travels() {
@@ -46,10 +47,11 @@ export default function Travels() {
   }, []);
 
   return (
-    <div className="grid min-h-screen justify-center">
-      <div className="relative w-full" ref={imageContainerRef}>
-        <img alt="Bali" src="/images/bali-main.jpg" ref={imageRef} />
-      </div>
-    </div>
+    <ComingSoon />
+    // <div className="grid min-h-screen justify-center">
+    //   <div className="relative w-full" ref={imageContainerRef}>
+    //     <img alt="Bali" src="/images/bali-main.jpg" ref={imageRef} />
+    //   </div>
+    // </div>
   );
 }
