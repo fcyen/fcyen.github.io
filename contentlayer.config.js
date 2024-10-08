@@ -1,4 +1,4 @@
-import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import { defineDocumentType, defineNestedType, makeSource } from 'contentlayer/source-files'
 import remarkGfm from 'remark-gfm'
 import rehypePrism from '@mapbox/rehype-prism'
 
@@ -49,9 +49,31 @@ export const CaseStudy = defineDocumentType(() => ({
   computedFields,
 }))
 
+const Card = defineNestedType(() => ({
+  name: 'Card',
+  fields: {
+    image: { type: 'string' },
+    caption: { type: 'string' },
+  },
+}))
+
+export const TravelPost = defineDocumentType(() => ({
+  name: 'TravelPost',
+  filePathPattern: `travels/**/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    title: { type: 'string', required: true },
+    date: { type: 'date', required: true },
+    cards: { type: 'list', of: Card },
+    thumbnail: { type: 'string' },
+  },
+
+  computedFields,
+}))
+
 export default makeSource({
   contentDirPath: 'src/content',
-  documentTypes: [Post, CaseStudy],
+  documentTypes: [Post, CaseStudy, TravelPost],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypePrism],

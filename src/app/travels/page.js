@@ -1,7 +1,9 @@
 "use client";
 
 import { ComingSoon } from "@/components/ComingSoon";
+import { TravelPostGrid } from "@/components/travels/TravelPostGrid";
 import { useEffect, useRef, useMemo } from "react";
+import { allTravelPosts } from 'contentlayer/generated';
 
 export default function Travels() {
   const imageRef = useRef(null);
@@ -47,7 +49,8 @@ export default function Travels() {
   }, []);
 
   return (
-    <ComingSoon />
+    // <ComingSoon />
+    <TravelPostGrid posts={allTravelPosts} />
     // <div className="grid min-h-screen justify-center">
     //   <div className="relative w-full" ref={imageContainerRef}>
     //     <img alt="Bali" src="/images/bali-main.jpg" ref={imageRef} />

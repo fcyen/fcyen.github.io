@@ -32,4 +32,4 @@ export default async function BlogCategoryPage({ params }) {
   return <BlogGrid posts={posts} />
 }
 
-export const dynamicParams = false
+export const dynamicParams = true
