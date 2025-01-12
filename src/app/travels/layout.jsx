@@ -11,7 +11,6 @@ export default function TravelLayout({ children }) {
           </div>
         </Container>
       </section>
-      <Footer />
     </>
   )
 }

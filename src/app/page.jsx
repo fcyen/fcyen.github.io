@@ -20,7 +20,6 @@ export default function HomePage() {
       <FeaturedWork />
       <Testimonials />
       <FeaturedPosts /> */}
-      <Footer />
     </>
   )
 }

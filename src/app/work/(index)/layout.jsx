@@ -1,7 +1,6 @@
 import { Tabs } from '@/components/Tabs'
 import { Pagination } from '@/components/Pagination'
 import { Container } from '@/components/Container'
-import { Footer } from '@/components/Footer'
 
 import { getFeaturedTags } from '@/lib/caseStudies'
 import { ComingSoon } from '../../../components/ComingSoon'
@@ -51,7 +50,6 @@ export default function WorkLayout({ children }) {
           </div>
         </Container>
       </section>
-      <Footer />
     </>
   )
 }
