@@ -36,7 +36,8 @@ export default function RootLayout({ children }) {
           'font-sans',
           inter.variable,
           lexend.variable,
-          gochiHand.variable
+          gochiHand.variable, 
+          'flex flex-col min-h-screen'
         )}
       >
         <Header />
