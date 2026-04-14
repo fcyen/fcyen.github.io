@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { compareDesc } from 'date-fns'
 
 import { Container } from '@/components/Container'
-import { allCaseStudies } from 'contentlayer/generated'
+import { allCaseStudies } from 'contentlayer2/generated'
 
 function getSortedCaseStudiesAndIndex(caseStudySlug) {
   const caseStudies = allCaseStudies.sort((a, b) =>

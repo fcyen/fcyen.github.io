@@ -1,16 +1,8 @@
 import Image from 'next/image'
-import clsx from 'clsx'
 
 import { Container } from './Container'
 import heroImage from '@/images/about-hero.png'
 import heroBG from '@/images/about-hero-gradient.svg'
-import { Mr_Dafoe } from 'next/font/google'
-
-const mrDafoe = Mr_Dafoe({
-  subsets: ['latin'],
-  variable: '--font-mr-dafoe',
-  weight: '400',
-})
 
 export function AboutHero() {
   return (
@@ -53,7 +45,7 @@ export function AboutHero() {
             frappuccino go luwak single mazagran.
           </p>
           <p
-            className={clsx('mt-16 text-3xl text-slate-700', mrDafoe.className)}
+            className="mt-16 text-3xl text-slate-700 font-mr-dafoe"
           >
             Jane Doe
           </p>

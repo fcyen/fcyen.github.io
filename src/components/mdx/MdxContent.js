@@ -1,4 +1,6 @@
-import { useMDXComponent } from 'next-contentlayer/hooks'
+'use client'
+
+import { useMDXComponent } from 'next-contentlayer2/hooks'
 import { MdxLink } from './MdxLink'
 import { MdxImage } from './MdxImage'
 

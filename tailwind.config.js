@@ -33,6 +33,7 @@ module.exports = {
         sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
         display: ['var(--font-lexend)', ...defaultTheme.fontFamily.sans],
         writing: ['var(--font-gochi-hand)', ...defaultTheme.fontFamily.sans],
+        'mr-dafoe': ['var(--font-mr-dafoe)', 'cursive'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

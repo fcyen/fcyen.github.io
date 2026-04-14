@@ -1,4 +1,4 @@
-import { allCaseStudies } from 'contentlayer/generated'
+import { allCaseStudies } from 'contentlayer2/generated'
 import { CaseStudies } from '@/components/work/CaseStudies'
 
 export default function WorkPage() {

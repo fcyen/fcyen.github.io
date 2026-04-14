@@ -1,4 +1,4 @@
-import { allCaseStudies } from 'contentlayer/generated'
+import { allCaseStudies } from 'contentlayer2/generated'
 import { CaseStudies } from '@/components/work/CaseStudies'
 
 import { getAllTags } from '@/lib/caseStudies'
@@ -18,16 +18,17 @@ export const generateStaticParams = async () => {
 }
 
 export async function generateMetadata({ params }) {
-  const tag = parseTag(params.tagSlug)
+  const { tagSlug } = await params
+  const tag = parseTag(tagSlug)
   return { title: tag }
 }
 
 export default async function WorkCategoryPage({ params }) {
+  const { tagSlug } = await params
   const caseStudies = allCaseStudies.filter((caseStudy) =>
-    caseStudy.tags.includes(parseTag(params.tagSlug))
+    caseStudy.tags.includes(parseTag(tagSlug))
   )
 
   return <CaseStudies caseStudies={caseStudies} />
 }
 
-export const dynamicParams = true

@@ -1,6 +1,6 @@
-import { defineDocumentType, defineNestedType, makeSource } from 'contentlayer/source-files'
+import { defineDocumentType, defineNestedType, makeSource } from 'contentlayer2/source-files'
 import remarkGfm from 'remark-gfm'
-import rehypePrism from '@mapbox/rehype-prism'
+import rehypePrism from 'rehype-prism-plus'
 
 const computedFields = {
   url: {
