@@ -1,8 +1,6 @@
 import clsx from 'clsx'
 import { Inter, Lexend, Gochi_Hand } from 'next/font/google'
 
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
 import '@/styles/globals.css'
 
 const inter = Inter({
@@ -38,13 +36,11 @@ export default function RootLayout({ children }) {
           'font-sans',
           inter.variable,
           lexend.variable,
-          gochiHand.variable, 
+          gochiHand.variable,
           'flex flex-col min-h-screen'
         )}
       >
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   )
