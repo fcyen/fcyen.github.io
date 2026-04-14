@@ -52,8 +52,8 @@ function SocialButton({ href, label, icon: Icon }) {
 export function WelcomeWidget() {
   return (
     <BentoCard className="md:col-span-2 lg:col-span-8">
-      <div className="flex h-full flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
-        <div className="flex-1">
+      <div className="flex h-full flex-col gap-6 sm:flex-row">
+        <div className="flex flex-1 flex-col justify-center">
           <p className="font-display text-sm uppercase tracking-widest text-bento-magenta">
             Welcome
           </p>
@@ -61,24 +61,23 @@ export function WelcomeWidget() {
             Hi, I'm <span className="text-bento-magenta">Ching Yen</span>
           </h1>
           <p className="mt-4 max-w-md text-base leading-7 text-bento-ink/80">
-            I'm a software engineer who brings a unique blend of technical
-            expertise and creative sensibility to my work
+            If you'd like to know more about my work, you can find me at:
           </p>
 
-          <div className="mt-6 flex items-center gap-3">
+          <div className="mt-4 flex items-center gap-3">
             {socials.map((s) => (
               <SocialButton key={s.label} {...s} />
             ))}
           </div>
         </div>
 
-        <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl border border-bento-coral/60 sm:h-36 sm:w-36">
+        <div className="relative h-40 w-40 shrink-0 overflow-hidden rounded-2xl sm:h-auto sm:w-48">
           <Image
             src={heroPortrait}
             alt="Portrait of Ching Yen"
             fill
             className="object-cover"
-            sizes="144px"
+            sizes="192px"
             priority
           />
         </div>
