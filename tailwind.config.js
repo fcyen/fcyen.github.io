@@ -21,6 +21,14 @@ module.exports = {
       '9xl': ['8rem', { lineHeight: '1' }],
     },
     extend: {
+      colors: {
+        bento: {
+          bg: '#FFEAD8',
+          coral: '#E8988A',
+          magenta: '#9B177E',
+          ink: '#2A1458',
+        },
+      },
       fontFamily: {
         sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
         display: ['var(--font-lexend)', ...defaultTheme.fontFamily.sans],

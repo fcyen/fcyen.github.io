@@ -2,3 +2,9 @@
 @tailwind components;
 @import './prism.css';
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bento-bg text-bento-ink;
+  }
+}
