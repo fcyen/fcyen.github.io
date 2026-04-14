@@ -3,37 +3,34 @@ import { WorksList } from "../WorksList";
 
 //
 // 👉 To fill in real content:
-//    1. Edit the `items` array below.
-//    2. Each item has: `title`, `company` (use this for the project's
-//       short subtitle or stack, e.g. "Side project · Next.js"),
-//       `year`, and an optional `href`.
-//    3. Add or remove entries freely — the layout will adapt.
-//    4. Order matters: newest entries first reads best.
+//    1. Edit the `items` array below. Each entry has:
+//         - title:   the project name (required)
+//         - company: short subtitle, e.g. "UIUX · Figma prototype" (required)
+//         - year:    4-digit year shown on the right (required)
+//         - href:    optional link; clicking the row opens it
+//    2. Entries are sourced from `src/content/work/*.mdx`. When you add a
+//       new MDX file under that folder, mirror its front-matter here
+//       (title, description → company, date → year, projectURL → href).
+//    3. Order matters: newest entries first reads best.
 //
 const items = [
   {
-    title: "Personal Project 1",
-    company: "Side project · Next.js",
+    title: "Redesigning OCBC App Experience",
+    company: "UIUX · UX case study",
     year: "2024",
-    href: "#",
+    href: "https://www.behance.net/gallery/212692493/Redesigning-the-OCBC-App-Experience",
   },
   {
-    title: "Personal Project 2",
-    company: "Side project · Python",
-    year: "2023",
-    href: "#",
-  },
-  {
-    title: "Personal Project 3",
-    company: "Experiment · Three.js",
-    year: "2022",
-    href: "#",
+    title: "HCI Coursework",
+    company: "UIUX · Indoor navigation prototype",
+    year: "2020",
+    href: "https://www.figma.com/design/MtBYfXYAKIVpArEspyL6Qo/Hi-Fi-Prototype?node-id=2-5533&t=rh3AJxmPemfGlIP1-1",
   },
 ];
 
 export function PersonalProjectsWidget() {
   return (
-    <BentoCard className="md:col-span-2 lg:col-span-2 lg:row-span-2">
+    <BentoCard className="md:col-span-2 lg:col-span-5">
       <WorksList title="Personal Projects" items={items} />
     </BentoCard>
   );
