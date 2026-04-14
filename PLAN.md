@@ -8,6 +8,12 @@ adapted to our existing Next.js 13 + Tailwind stack.
 This first pass only covers the homepage and four widgets:
 **Welcome**, **About me**, **Professional Experience**, **Personal Projects**.
 
+> **Branching note**: `claude/remake-portfolio-site-ES6TK` is the **root branch**
+> for the portfolio remake. All follow-up work (additional widgets, header/footer
+> redesign, other pages, etc.) should branch off this branch — not `main` —
+> until the remake is merged. Subsequent feature branches should target this
+> branch as their base and merge back into it.
+
 ---
 
 ## 1. Current state
