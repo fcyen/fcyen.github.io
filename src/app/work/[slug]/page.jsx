@@ -41,7 +41,7 @@ export default async function CaseStudyPage({ params }) {
       </CaseStudyDetails>
       {caseStudy.images && (<CaseStudyGallery images={caseStudy.images} />)}
       <CaseStudyNavigation caseStudySlug={caseStudy.slug} />
-      <Footer newsletter={false} />
+      {/* <Footer newsletter={false} /> */}
     </>
   )
 }
