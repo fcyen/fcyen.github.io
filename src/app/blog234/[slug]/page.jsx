@@ -5,7 +5,6 @@ import { format, parseISO } from 'date-fns'
 
 import { PostFooter } from './PostFooter'
 import { MdxContent } from '@/components/mdx/MdxContent'
-import { Footer } from '@/components/Footer'
 import {
   WebDevelopmentIcon,
   TutorialIcon,
@@ -101,7 +100,6 @@ export default async function BlogPost({ params }) {
           </div>
         </article>
       </main>
-      <Footer />
     </>
   )
 }

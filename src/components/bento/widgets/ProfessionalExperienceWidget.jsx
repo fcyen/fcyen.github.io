@@ -34,7 +34,7 @@ const items = [
 
 export function ProfessionalExperienceWidget() {
   return (
-    <BentoCard className="md:col-span-2 lg:col-span-5">
+    <BentoCard className="md:col-span-2 lg:col-span-4">
       <WorksList title="Professional Experience" items={items} />
     </BentoCard>
   );
