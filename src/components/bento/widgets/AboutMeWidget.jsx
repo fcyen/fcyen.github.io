@@ -10,7 +10,7 @@ import { BentoCard } from "../BentoCard";
 //       long-form about page lives somewhere else.
 //
 const bio =
-  "Placeholder bio — replace this with a short paragraph about yourself, your background, and what you love to build. Aim for 2–3 sentences so it fits comfortably inside the card.";
+  "I’m a software engineer who builds scalable frontends with users in mind. My goal is to design solutions that not only scale but meaningfully connect with the people who use them — using the path of least resistance to make it happen. When I'm not in front of my computer, I like being in the outdoors. I also love travelling and capturing the beauty of a place from the lens of the first time visitor.";
 
 export function AboutMeWidget() {
   return (
@@ -21,12 +21,12 @@ export function AboutMeWidget() {
       <p className="mt-3 flex-1 text-base leading-7 text-bento-ink/80">
         {bio}
       </p>
-      <Link
+      {/* <Link
         href="/about"
         className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-bento-magenta transition hover:text-bento-ink"
       >
         Read more <span aria-hidden="true">→</span>
-      </Link>
+      </Link> */}
     </BentoCard>
   );
 }
