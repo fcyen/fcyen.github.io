@@ -1,25 +1,21 @@
-import { Hero } from '@/components/Hero'
-import { Experience } from '@/components/Experience'
-import { StackIconsRow } from '@/components/StackIconsRow'
-import { FeaturedWork } from '@/components/work/FeaturedWork'
-import { Testimonials } from '@/components/Testimonials'
-import { FeaturedPosts } from '@/components/blog/FeaturedPosts'
-import { Footer } from '@/components/Footer'
+import { BentoGrid } from "@/components/bento/BentoGrid";
+import { WelcomeWidget } from "@/components/bento/widgets/WelcomeWidget";
+import { AboutMeWidget } from "@/components/bento/widgets/AboutMeWidget";
+import { ProfessionalExperienceWidget } from "@/components/bento/widgets/ProfessionalExperienceWidget";
+import { PersonalProjectsWidget } from "@/components/bento/widgets/PersonalProjectsWidget";
 
 export const metadata = {
   description:
     "I'm a software engineer who brings a unique blend of technical expertise and creative sensibility to my work",
-}
+};
 
 export default function HomePage() {
   return (
-    <>
-      <Hero />
-      {/* <Experience />
-      <StackIconsRow />
-      <FeaturedWork />
-      <Testimonials />
-      <FeaturedPosts /> */}
-    </>
-  )
+    <BentoGrid>
+      <WelcomeWidget />
+      <AboutMeWidget />
+      <ProfessionalExperienceWidget />
+      <PersonalProjectsWidget />
+    </BentoGrid>
+  );
 }
