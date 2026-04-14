@@ -14,7 +14,7 @@ const bio =
 
 export function AboutMeWidget() {
   return (
-    <BentoCard className="md:col-span-2 lg:col-span-2">
+    <BentoCard className="md:col-span-2 lg:col-span-2 lg:col-start-9 lg:row-span-2 lg:row-start-1">
       <p className="font-display text-sm uppercase tracking-widest text-bento-magenta">
         About me
       </p>
