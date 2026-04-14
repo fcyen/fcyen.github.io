@@ -60,8 +60,8 @@ export function WelcomeWidget() {
           <h1 className="mt-2 font-display text-4xl font-semibold text-bento-ink sm:text-5xl">
             Hi, I'm <span className="text-bento-magenta">Ching Yen</span>
           </h1>
-          <p className="mt-4 max-w-md text-base leading-7 text-bento-ink/80">
-            If you'd like to know more about my work, you can find me at:
+          <p className="mt-4 max-w-md text-base leading-5 text-bento-ink/80">
+            If you would like to know more about my work, feel free to reach me at:
           </p>
 
           <div className="mt-4 flex items-center gap-3">
