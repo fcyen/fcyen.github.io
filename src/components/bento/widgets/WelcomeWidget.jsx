@@ -1,6 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { BentoCard } from "../BentoCard";
+import {
+  LinkedInIcon,
+  GitHubIcon,
+  EmailIcon,
+} from "@/components/SocialIcons";
 import heroPortrait from "@/images/my-avatar.jpg";
 
 //
@@ -9,11 +15,43 @@ import heroPortrait from "@/images/my-avatar.jpg";
 //    - Change the tagline in the <p> below.
 //    - Swap the avatar by replacing `src/images/my-avatar.jpg`
 //      or updating the import above to point at a different file.
+//    - Update the social links in the `socials` array below.
 //
+const socials = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/foo-ching-yen/",
+    icon: LinkedInIcon,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/fcyen",
+    icon: GitHubIcon,
+  },
+  {
+    label: "Email",
+    href: "mailto:foo.chingyen@gmail.com",
+    icon: EmailIcon,
+  },
+];
+
+function SocialButton({ href, label, icon: Icon }) {
+  return (
+    <Link
+      href={href}
+      aria-label={label}
+      target={href.startsWith("mailto:") ? undefined : "_blank"}
+      rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+      className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-bento-coral/60 bg-white/60 text-bento-ink transition hover:-translate-y-0.5 hover:bg-bento-coral/20 hover:text-bento-magenta"
+    >
+      <Icon className="h-5 w-5" />
+    </Link>
+  );
+}
 
 export function WelcomeWidget() {
   return (
-    <BentoCard className="md:col-span-2 lg:col-span-2 lg:row-span-2">
+    <BentoCard className="md:col-span-2 lg:col-span-8">
       <div className="flex h-full flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
         <div className="flex-1">
           <p className="font-display text-sm uppercase tracking-widest text-bento-magenta">
@@ -26,6 +64,12 @@ export function WelcomeWidget() {
             I'm a software engineer who brings a unique blend of technical
             expertise and creative sensibility to my work
           </p>
+
+          <div className="mt-6 flex items-center gap-3">
+            {socials.map((s) => (
+              <SocialButton key={s.label} {...s} />
+            ))}
+          </div>
         </div>
 
         <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl border border-bento-coral/60 sm:h-36 sm:w-36">
