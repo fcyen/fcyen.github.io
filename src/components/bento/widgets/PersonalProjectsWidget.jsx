@@ -9,8 +9,12 @@ import { WorksList } from "../WorksList";
 //         - year:    4-digit year shown on the right (required)
 //         - href:    optional link; clicking the row opens it
 //    2. Entries are sourced from `src/content/work/*.mdx`. When you add a
-//       new MDX file under that folder, mirror its front-matter here
-//       (title, description → company, date → year, projectURL → href).
+//       new MDX file under that folder, mirror its front-matter here:
+//         - title       → title
+//         - description → company
+//         - date (year) → year
+//         - href        → `/work/<slug>` (the case study page, where
+//                         <slug> is the MDX filename without the extension)
 //    3. Order matters: newest entries first reads best.
 //
 const items = [
@@ -18,13 +22,13 @@ const items = [
     title: "Redesigning OCBC App Experience",
     company: "UIUX · UX case study",
     year: "2024",
-    href: "https://www.behance.net/gallery/212692493/Redesigning-the-OCBC-App-Experience",
+    href: "/work/ocbc",
   },
   {
     title: "HCI Coursework",
     company: "UIUX · Indoor navigation prototype",
     year: "2020",
-    href: "https://www.figma.com/design/MtBYfXYAKIVpArEspyL6Qo/Hi-Fi-Prototype?node-id=2-5533&t=rh3AJxmPemfGlIP1-1",
+    href: "/work/hci",
   },
 ];
 
