@@ -1,7 +1,6 @@
 import { CaseStudyHero } from '@/components/work/CaseStudyHero'
 import { CaseStudyDetails } from '@/components/work/CaseStudyDetails'
 import { CaseStudyGallery } from '@/components/work/CaseStudyGallery'
-import { CaseStudyTestimonial } from '@/components/work/CaseStudyTestimonial'
 import { CaseStudyNavigation } from '@/components/work/CaseStudyNavigation'
 import { allCaseStudies } from 'contentlayer2/generated'
 import { MdxContent } from '@/components/mdx/MdxContent'
