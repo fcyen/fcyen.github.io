@@ -3,7 +3,7 @@ import { CaseStudyDetails } from '@/components/work/CaseStudyDetails'
 import { CaseStudyGallery } from '@/components/work/CaseStudyGallery'
 import { CaseStudyTestimonial } from '@/components/work/CaseStudyTestimonial'
 import { CaseStudyNavigation } from '@/components/work/CaseStudyNavigation'
-import { allCaseStudies } from 'contentlayer/generated'
+import { allCaseStudies } from 'contentlayer2/generated'
 import { MdxContent } from '@/components/mdx/MdxContent'
 import { Footer } from '@/components/Footer'
 
@@ -11,15 +11,17 @@ export const generateStaticParams = async () =>
   allCaseStudies.map((caseStudy) => ({ slug: caseStudy.slug }))
 
 export async function generateMetadata({ params }) {
+  const { slug } = await params
   const caseStudy = allCaseStudies.find(
-    (caseStudy) => caseStudy.slug === params.slug
+    (caseStudy) => caseStudy.slug === slug
   )
   return { title: caseStudy.title, description: caseStudy.description }
 }
 
-export default function CaseStudyPage({ params }) {
+export default async function CaseStudyPage({ params }) {
+  const { slug } = await params
   const caseStudy = allCaseStudies.find(
-    (caseStudy) => caseStudy.slug === params.slug
+    (caseStudy) => caseStudy.slug === slug
   )
 
   return (
@@ -44,4 +46,3 @@ export default function CaseStudyPage({ params }) {
   )
 }
 
-export const dynamicParams = true

@@ -2,7 +2,7 @@ import { Container } from '@/components/Container'
 import { BlogGrid } from '@/components/blog/BlogGrid'
 
 import { compareDesc } from 'date-fns'
-import { allPosts } from 'contentlayer/generated'
+import { allPosts } from 'contentlayer2/generated'
 
 export function FeaturedPosts() {
   const posts = allPosts

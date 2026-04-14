@@ -2,6 +2,7 @@
 @import '@fontsource-variable/inter';
 @import '@fontsource-variable/lexend';
 @import '@fontsource/gochi-hand';
+@import '@fontsource/mr-dafoe';
 
 @tailwind base;
 @tailwind components;
@@ -13,6 +14,7 @@
     --font-inter: 'Inter Variable', sans-serif;
     --font-lexend: 'Lexend Variable', sans-serif;
     --font-gochi-hand: 'Gochi Hand', cursive;
+    --font-mr-dafoe: 'Mr Dafoe', cursive;
   }
 
   body {

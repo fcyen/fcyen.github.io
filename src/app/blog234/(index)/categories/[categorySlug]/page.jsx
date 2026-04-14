@@ -1,5 +1,5 @@
 import { BlogGrid } from '@/components/blog/BlogGrid'
-import { allPosts } from 'contentlayer/generated'
+import { allPosts } from 'contentlayer2/generated'
 
 import { getAllCategories } from '@/lib/articles'
 
@@ -20,16 +20,17 @@ export const generateStaticParams = async () => {
 }
 
 export async function generateMetadata({ params }) {
-  const category = parseCategory(params.categorySlug)
+  const { categorySlug } = await params
+  const category = parseCategory(categorySlug)
   return { title: category }
 }
 
 export default async function BlogCategoryPage({ params }) {
+  const { categorySlug } = await params
   const posts = allPosts.filter(
-    (post) => post.category === parseCategory(params.categorySlug)
+    (post) => post.category === parseCategory(categorySlug)
   )
 
   return <BlogGrid posts={posts} />
 }
 
-export const dynamicParams = true

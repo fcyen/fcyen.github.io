@@ -10,7 +10,7 @@ import {
   BrandingIcon,
   ProductDevelopmentIcon,
 } from '../CategoryIcons'
-import { allCaseStudies } from 'contentlayer/generated'
+import { allCaseStudies } from 'contentlayer2/generated'
 
 const iconOptions = {
   'Web Development': WebDevelopmentIcon,

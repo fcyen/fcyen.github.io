@@ -1,4 +1,4 @@
-import { allCaseStudies } from 'contentlayer/generated'
+import { allCaseStudies } from 'contentlayer2/generated'
 
 export function getAllTags() {
   let repeatingTags = allCaseStudies.map((caseStudy) => caseStudy.tags).flat()

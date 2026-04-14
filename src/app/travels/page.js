@@ -3,7 +3,7 @@
 import { ComingSoon } from "@/components/ComingSoon";
 import { TravelPostGrid } from "@/components/travels/TravelPostGrid";
 import { useEffect, useRef, useMemo } from "react";
-import { allTravelPosts } from 'contentlayer/generated';
+import { allTravelPosts } from 'contentlayer2/generated';
 
 export default function Travels() {
   const imageRef = useRef(null);

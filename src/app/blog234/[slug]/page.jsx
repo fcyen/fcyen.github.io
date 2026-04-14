@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { allPosts } from 'contentlayer/generated'
+import { allPosts } from 'contentlayer2/generated'
 import { format, parseISO } from 'date-fns'
 
 import { PostFooter } from './PostFooter'
@@ -24,12 +24,14 @@ export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post.slug }))
 
 export async function generateMetadata({ params }) {
-  const post = allPosts.find((post) => post.slug === params.slug)
+  const { slug } = await params
+  const post = allPosts.find((post) => post.slug === slug)
   return { title: post.title, description: post.description }
 }
 
-export default function BlogPost({ params }) {
-  const post = allPosts.find((post) => post.slug === params.slug)
+export default async function BlogPost({ params }) {
+  const { slug } = await params
+  const post = allPosts.find((post) => post.slug === slug)
   const categorySlug = post.category.replace(/ /g, '-').toLowerCase()
   const CategoryIcon = iconOptions[post.category]
 
@@ -104,4 +106,3 @@ export default function BlogPost({ params }) {
   )
 }
 
-export const dynamicParams = true
