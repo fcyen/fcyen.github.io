@@ -13,21 +13,15 @@ import { WorksList } from "../WorksList";
 //
 const items = [
   {
-    title: "Project Title 1",
-    company: "Company A",
-    year: "2024",
+    title: "Software Engineer",
+    company: "GoodNotes",
+    year: "2025-2026",
     href: "#",
   },
   {
-    title: "Project Title 2",
-    company: "Company B",
-    year: "2023",
-    href: "#",
-  },
-  {
-    title: "Project Title 3",
-    company: "Company C",
-    year: "2022",
+    title: "Senior Software Engineer",
+    company: "Zendesk",
+    year: "2021-2025",
     href: "#",
   },
 ];
