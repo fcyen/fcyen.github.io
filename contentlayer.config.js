@@ -42,7 +42,7 @@ export const CaseStudy = defineDocumentType(() => ({
     thumbnail: { type: 'string', required: true },
     coverImage: { type: 'string' },
     images: { type: 'list', of: { type: 'string' } },
-    projectURL: { type: 'string', required: true },
+    projectURL: { type: 'string' },
     description: { type: 'string', required: true },
   },
 
