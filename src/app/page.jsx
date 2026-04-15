@@ -3,7 +3,6 @@ import { WelcomeWidget } from "@/components/bento/widgets/WelcomeWidget";
 import { AboutMeWidget } from "@/components/bento/widgets/AboutMeWidget";
 import { ProfessionalExperienceWidget } from "@/components/bento/widgets/ProfessionalExperienceWidget";
 import { PersonalProjectsWidget } from "@/components/bento/widgets/PersonalProjectsWidget";
-import { MusicWidget } from "@/components/bento/widgets/MusicWidget";
 
 export const metadata = {
   description:
@@ -17,7 +16,6 @@ export default function HomePage() {
       <AboutMeWidget />
       <ProfessionalExperienceWidget />
       <PersonalProjectsWidget />
-      <MusicWidget />
     </BentoGrid>
   );
 }
