@@ -78,22 +78,51 @@ function MusicButton({ playing, onToggle }) {
       title={`${TRACK.title} — ${TRACK.artist}`}
       className="inline-flex h-11 items-center gap-2 rounded-xl border border-bento-coral/60 bg-white/60 px-3 text-bento-ink transition hover:-translate-y-0.5 hover:bg-bento-coral/20 hover:text-bento-magenta"
     >
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        aria-hidden="true"
-        className={`h-5 w-5 ${playing ? "animate-spin [animation-duration:3s]" : ""}`}
-      >
-        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" />
-        <circle
-          cx="12"
-          cy="12"
-          r="3.5"
-          stroke="currentColor"
-          strokeWidth="1.5"
-        />
-        <circle cx="12" cy="12" r="1" fill="currentColor" />
-      </svg>
+      <span className="relative inline-block h-5 w-5">
+        {/* Vinyl disc — spins while playing */}
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+          className={`absolute inset-0 h-full w-full ${
+            playing ? "animate-spin [animation-duration:3s]" : ""
+          }`}
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="8"
+            stroke="currentColor"
+            strokeWidth="1.5"
+          />
+          <circle
+            cx="12"
+            cy="12"
+            r="3"
+            stroke="currentColor"
+            strokeWidth="1.5"
+          />
+          <circle cx="12" cy="12" r="0.75" fill="currentColor" />
+        </svg>
+        {/* Tonearm — static */}
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full"
+        >
+          <line
+            x1="20"
+            y1="4"
+            x2="14.5"
+            y2="9.5"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+          />
+          <circle cx="20" cy="4" r="1.25" fill="currentColor" />
+        </svg>
+      </span>
       {playing ? (
         <svg
           viewBox="0 0 24 24"
