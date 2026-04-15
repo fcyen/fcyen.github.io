@@ -76,7 +76,7 @@ function MusicButton({ playing, onToggle }) {
           : `Play ${TRACK.title} by ${TRACK.artist}`
       }
       title={`${TRACK.title} — ${TRACK.artist}`}
-      className="inline-flex h-11 items-center gap-2 rounded-xl border border-bento-coral/60 bg-white/60 px-3 text-bento-ink transition hover:-translate-y-0.5 hover:bg-bento-coral/20 hover:text-bento-magenta"
+      className="ml-2 inline-flex h-11 items-center gap-2 rounded-xl border border-bento-ink bg-bento-ink px-3 text-bento-bg transition hover:-translate-y-0.5 hover:border-bento-magenta hover:bg-bento-magenta"
     >
       <span className="relative inline-block h-5 w-5">
         {/* Vinyl disc — spins while playing */}
