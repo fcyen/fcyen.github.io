@@ -42,13 +42,13 @@ const socials = [
 ];
 
 const TRACK = {
-  title: "Luminescent Serenade",
-  artist: "PumpUpTheMind",
-  src: "/media/luminescent-serenade.mp3",
+  title: "Future Jazz 2 (Full Album)",
+  artist: "Jan Klein",
+  src: "/media/jazz.mp3",
   source:
-    "https://freemusicarchive.org/music/pumpupthemind/single/luminescent-serenade/",
-  license: "CC BY-NC-ND 4.0",
-  licenseUrl: "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "https://freemusicarchive.org/music/jan-klein/future-jazz-symphony/future-jazz-2-full-album/",
+  license: "CC BY-NC 4.0",
+  licenseUrl: "https://creativecommons.org/licenses/by-nc/4.0/",
 };
 
 function SocialButton({ href, label, icon: Icon }) {
