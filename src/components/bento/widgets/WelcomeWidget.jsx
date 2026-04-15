@@ -44,7 +44,7 @@ const socials = [
 const TRACK = {
   title: "Luminescent Serenade",
   artist: "PumpUpTheMind",
-  src: "/audio/luminescent-serenade.mp3",
+  src: "/media/luminescent-serenade.mp3",
   source:
     "https://freemusicarchive.org/music/pumpupthemind/single/luminescent-serenade/",
   license: "CC BY-NC-ND 4.0",
