@@ -1,21 +1,11 @@
-import { BentoGrid } from "@/components/bento/BentoGrid";
-import { WelcomeWidget } from "@/components/bento/widgets/WelcomeWidget";
-import { AboutMeWidget } from "@/components/bento/widgets/AboutMeWidget";
-import { ProfessionalExperienceWidget } from "@/components/bento/widgets/ProfessionalExperienceWidget";
-import { PersonalProjectsWidget } from "@/components/bento/widgets/PersonalProjectsWidget";
+"use client";
 
-export const metadata = {
-  description:
-    "I'm a software engineer who brings a unique blend of technical expertise and creative sensibility to my work",
-};
+import { useEffect } from "react";
 
 export default function HomePage() {
-  return (
-    <BentoGrid>
-      <WelcomeWidget />
-      <AboutMeWidget />
-      <ProfessionalExperienceWidget />
-      <PersonalProjectsWidget />
-    </BentoGrid>
-  );
+  useEffect(() => {
+    window.location.replace("https://foochingyen.netlify.app");
+  }, []);
+
+  return null;
 }
